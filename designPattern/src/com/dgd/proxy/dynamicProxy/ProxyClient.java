@@ -14,6 +14,8 @@ public class ProxyClient {
         System.out.println("李四修改："+orderApi);
         orderApi.setOrderNum(30,"张三");
         System.out.println("张三修改:"+orderApi);
+        orderApi.setProductName("java", "王五");
+        System.out.println("王五修改:"+orderApi);
 
 
     }
