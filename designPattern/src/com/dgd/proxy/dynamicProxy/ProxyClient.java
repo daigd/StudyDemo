@@ -11,11 +11,11 @@ public class ProxyClient {
         DynamicProxy dynamicProxy = new DynamicProxy();
         OrderApi orderApi = dynamicProxy.getProxyInterface(order);
         orderApi.setOrderNum(20, "李四");
-        System.out.println("李四修改："+orderApi);
+        System.out.println("李四修改："+order);
         orderApi.setOrderNum(30,"张三");
-        System.out.println("张三修改:"+orderApi);
+        System.out.println("张三修改:"+order);
         orderApi.setProductName("java", "王五");
-        System.out.println("王五修改:"+orderApi);
+        System.out.println("王五修改:"+order);
 
 
     }
