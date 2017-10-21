@@ -15,6 +15,6 @@ public class PriceClient {
         PriceContext context = new PriceContext(priceStrategy);
         //计算报价
         System.out.println("原价:"+price);
-        System.out.println("现价:"+context.quote(price));
+        System.out.println("向客户报价:"+context.quote(price));
     }
 }
