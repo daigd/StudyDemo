@@ -1,4 +1,4 @@
-package com.dgd.observer;
+package com.dgd.observer.myobserver;
 
 /**
  * @Author DGD

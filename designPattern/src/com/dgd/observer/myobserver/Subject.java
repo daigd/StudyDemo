@@ -1,4 +1,4 @@
-package com.dgd.observer;
+package com.dgd.observer.myobserver;
 
 import java.util.ArrayList;
 import java.util.List;
