@@ -8,6 +8,7 @@ import java.math.BigDecimal;
  */
 public class Client {
     public static void main(String[] args) {
+        //聚餐费
         FeeRequestModel rm = new FeeRequestModel();
         rm.setUserName("小李");
         rm.setFee(BigDecimal.TEN);
@@ -17,5 +18,15 @@ public class Client {
 
         rm.setFee(BigDecimal.valueOf(800));
         System.out.println(handler.handlerRequest(rm));
+
+        //差旅费
+        PreFeeRequestModel pfm = new PreFeeRequestModel();
+        pfm.setUserName("小张");
+        pfm.setPreFee(BigDecimal.TEN);
+
+        handler = new ProjectManagerHandler2();
+        System.out.println(handler.handlerRequest(pfm));
+
+
     }
 }
