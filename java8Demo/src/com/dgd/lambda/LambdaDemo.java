@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -40,6 +41,11 @@ public class LambdaDemo {
         System.out.println(result);
 
         filter(fruits,(f) -> f.length()==3).forEach(System.out::println);
+
+        System.out.println("接口默认方法实现示例:");
+        List<Integer> integerList = Arrays.asList(3, 2, 9, 4, 1);
+        integerList.sort(Comparator.naturalOrder());
+        System.out.println("排序后:"+integerList);
     }
     //编写一个函数式接口
     @FunctionalInterface
