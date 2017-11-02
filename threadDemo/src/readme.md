@@ -8,5 +8,11 @@
 
 3. 创建线程的方式
     > 方式一:继承Thread类,重写run()方法。
+    
     > 方式二:实现Runnable接口
+    
+4. wait/notify
+    > wait()使线程停止运行,notify()使停止运行的线程继续运行。
+    
+    > wait()和notify()必须要在同步代码块/同步方法中被调用,否则抛出IllegalMonitorStateException异常。
 
