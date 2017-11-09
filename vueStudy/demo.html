@@ -3,6 +3,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title>
+		
+		
     </head>
 
     <body>
@@ -48,6 +50,152 @@
 				v-bind:key="item.id">
 				</todo-item>
 			</ol>
+		</div>
+		
+		<div id="app-8">
+			<p>Original message: "{{ message}}"</P>
+			<p>Computed reversed message:"{{reversedMessage}}"</p>
+		</div>
+		
+		<div id="app-9">
+			<p>FullName:"{{ fullName}}"</p>
+		</div>
+		
+		<div id="app-10" v-bind:style="styleObject">
+			<p>{{message}}</p>
+		</div>
+		
+		<div id="app-11">
+			<h1 v-if="ok">Yes</h1>
+			<h1 v-else>No</h1>
+		</div>
+		
+		<div id="app-12">
+			<template v-if="ok">
+				<h1>Yes</h1>
+				<p>Good good study!</p>
+			</template>
+			<template v-else>
+				<h1>No</h1>
+				<p>Day day up!</p>
+			</template>
+		</div>
+		<div id="app-13">
+			<template v-if="loginType==='username'">
+				<label>Username:</label>
+				<input placeholder="Enter your username" key="username-input" />
+			</template>
+			<template v-else>
+				<label>Email:</label>
+				<input placeholder="Enter your email" key="email-input" />
+			</template>
+			<button @click="toggle">Toggle login type1</button>
+			<button v-on:click="toggle">Toggle login type2</button>
+		</div>
+		
+		<div id="app-14">
+			<h1 v-show="ok">Show Hello!</h1>
+		</div>
+		
+		<div id="app-15">
+			<ul>
+				<li v-for="item in items">
+					{{item.message}}
+				</li>
+			</ul>
+		</div>
+		
+		<div id="app-16">
+			<ol>
+				<li v-for="(item,index) in items">
+					{{parentMsg}}-{{index+1}}-{{item.msg}}
+				</li>
+			</ol>
+		</div>
+		
+		<div id="app-17">
+			<ul>
+				<li v-for="(value,key,index) in object">
+					{{index}}:{{key}}={{value}}
+				</li>
+			</ul>
+		</div>
+		<div id="app-18">
+			<input v-model="newTodoText"
+					@keyup.enter="addNewTodo"
+					placeholder="Add a todo">
+			<ul>
+				<li is="todo-item18" v-for="(todo,index) in todos"
+					v-bind:key="todo.id"
+					v-bind:title="todo.title"
+					v-on:remove="todos.splice(index,1)"
+				></li>
+			</ul>
+		</div>
+		
+		<div id="app-19">
+			<button @click="counter += 1">增加1</button>
+			<p>这个按钮被点击了{{counter}}次</p>
+		</div>
+		<div id="app-20">
+			<button @click="greet">Greet</button>
+		</div>
+		
+		<div id="app-21">
+			<button @click="say('Hi!')">Say Hi</button>
+			<button @click="say('What?')">Say What</button>
+		</div>
+		<div id="app-22">
+			<input @keyup.enter="submit" v-model="message" :value="message"></input>
+		</div>
+		<div id="app-23">
+			<span>Multiline message is:</span>
+			<p style="white-space:pre-line;">{{message}}</p>
+			<textarea v-model="message" placeholder="add multiple lines"></textarea>
+		</div>
+		<div id="app-24">
+			<input type="checkbox" id="checkbox" v-model="msg"/>
+			<label for="checkbox">{{msg}}</label>
+		</div>
+		<div id="app-25">
+			<select v-model="msg">
+				<option disabled value="">请选择</option>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+			<span>Selected:{{msg}}</span>
+		</div>
+		<div id="app-26">
+			<select v-model="msg" multiple style="width:50px">
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+			<br/>
+			<span>Selected:{{msg}}</span>
+		</div>
+		<div id="app-27">
+			<my-component-27></my-component-27>
+		</div>
+		<div id="app-28">
+			<my-component-28></my-component-28>
+			<my-component-28></my-component-28>
+			<my-component-28></my-component-28>
+		</div>
+		<div id="app-29">
+			<child message="Hello"></child>
+		</div>
+		<div id="app-30">
+			<p>{{total}}</p>
+			<my-component-30 v-on:increment="incrementTotal"></my-component-30>
+			<my-component-30 v-on:increment="incrementTotal"></my-component-30>
+		</div>
+		<div id="app-31">
+			<button @click="show = !show">Toggle</button>
+			<transition name="fade" mode="in-out">
+				<p v-if="show">Hello</p>
+			</transition>
 		</div>
 		
     </body>
