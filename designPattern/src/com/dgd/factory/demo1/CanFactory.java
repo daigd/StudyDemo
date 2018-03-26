@@ -10,11 +10,7 @@ public class CanFactory {
         Can can = null;
         try {
             can = (Can) Class.forName("com.dgd.factory.demo1.CannedSardines").newInstance();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return can;

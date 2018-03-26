@@ -9,11 +9,7 @@ public class CPUFactory {
         CPUApi api = null;
         try {
             api = (CPUApi) Class.forName("com.dgd.factory.demo1.IntelCPU").newInstance();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }catch (IllegalAccessException e) {
-            e.printStackTrace();
-        }catch (InstantiationException e) {
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
             e.printStackTrace();
         }
         return api;
