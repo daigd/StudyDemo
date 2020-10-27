@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="myTestBean" class="com.dgd.spring.beans.factory.MyTestBean"/>
+	<bean id="listener" class="com.dgd.spring.beans.factory.TestEventListener"/>
+	
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>cn</value>
+				<value>us</value>
+			</list>
+		</property>
+	</bean>
+</beans>	
+
