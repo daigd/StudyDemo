@@ -26,17 +26,35 @@
     </properties>
     
     <dependencies>
+        <!--bean,context依赖 begin-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <!--bean,context依赖 end-->
+        
+        <!--aop依赖 begin-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!--aop依赖 end-->
+
+        <!--单元测试依赖 begin-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--单元测试依赖 end-->
     </dependencies>
 
 </project>
