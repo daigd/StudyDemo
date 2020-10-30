@@ -6,9 +6,10 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
+	<aop:aspectj-autoproxy expose-proxy="true"/>
 
-	<aop:aspectj-autoproxy/>
 	<bean id="myTestBean" class="com.dgd.spring.beans.factory.MyTestBean"/>
+	<bean id="asyncServiceImpl" class="com.dgd.spring.beans.factory.AsyncServiceImpl"/>
 	<bean class="com.dgd.spring.aop.AspectJTest"/>
 
 </beans>
