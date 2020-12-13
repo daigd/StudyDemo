@@ -11,6 +11,7 @@ test-output
 *.iws
 *.iml
 *.ipr
+out/
 
 #exclusive
 !src/
