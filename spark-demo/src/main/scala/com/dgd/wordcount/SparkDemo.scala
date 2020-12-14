@@ -1,4 +1,4 @@
-package com.dgd
+package com.dgd.wordcount
 
 import org.apache.spark.sql.SparkSession
 
