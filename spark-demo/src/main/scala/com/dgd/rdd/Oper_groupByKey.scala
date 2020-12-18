@@ -10,7 +10,6 @@ object Oper_groupByKey {
 
     val rdd: RDD[(String, Int)] = sc.makeRDD(Array(("b", 2), ("a", 3), ("b", 1), ("c", 2), ("a", 4)))
     val groupByKeyRDD: RDD[(String, Iterable[Int])] = rdd.groupByKey()
-
     groupByKeyRDD.collect().foreach(println)
   }
 }
