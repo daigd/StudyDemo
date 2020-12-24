@@ -39,5 +39,22 @@ object RunningSqlDemo {
         |GROUP BY name
         |""".stripMargin)
     sqlDf2.show()
+    
+    printf("=================%s====================\n","global temp view")
+    // 创建全局视图
+    df.createOrReplaceGlobalTempView("p")
+    
+    spark.sql("select * from global_temp.p").show()
+    // +---------+---+---+-----+
+    //|  address|age| id| name|
+    //+---------+---+---+-----+
+    //|  Beijing| 24|  1| 小王|
+    //| Shanghai| 22|  2|Marry|
+    //|Guangzhou| 30|  3| 老马|
+    //+---------+---+---+-----+
+    spark.newSession().sql("select * from global_temp.p").show()
+    
+    spark.stop()
+    
   }
 }

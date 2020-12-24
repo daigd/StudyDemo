@@ -53,7 +53,7 @@ object SparkSqlDemo {
     //| 30|    1|
     //| 24|    1|
     //+---+-----+
-    
-    
+
+    spark.stop()
   }
 }
