@@ -6,7 +6,8 @@ import java.util.List;
 /**
  * @author : DaiGD
  * @createtime :  2021年01月05日 10:33
- * @description : VM Args: -Xmx20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError
+ * @description : VM Args: -Xmx20m -Xms20m -XX:+HeapDumpOnOutOfMemoryError 
+ * -XX:HeapDumpPath=gc.hprof -XX:+PrintGCDetails -Xloggc:gc.log
  */
 public class HeapOOM
 {
