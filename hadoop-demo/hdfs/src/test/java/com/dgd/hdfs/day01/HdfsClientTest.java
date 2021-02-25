@@ -1,4 +1,4 @@
-package com.dgd.hdfs;
+package com.dgd.hdfs.day01;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
