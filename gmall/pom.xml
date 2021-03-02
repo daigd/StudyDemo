@@ -10,7 +10,13 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>gmall-rt</module>
+        <module>gmall-applog</module>
     </modules>
 
+    <!--版本号统一-->
+    <properties>
+        <slf4j.version>1.7.20</slf4j.version>
+        <logback.version>1.0.7</logback.version>
+    </properties>
 
 </project>
