@@ -4,7 +4,7 @@ import java.util.Properties
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer
 
 /**
  * @description: Kafka 数据源
@@ -17,13 +17,16 @@ object KafkaTest {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
 
     val props: Properties = new Properties()
-    props.setProperty("bootstrap.servers","bigdata101:9092")
+    props.setProperty("bootstrap.servers","bigdata-dev01:9092")
     props.setProperty("group.id","consumer-group")
     props.setProperty("key.deserializer","org.apache.kafka.common.serialization.StringDeserializer")
     props.setProperty("value.deserializer","org.apache.kafka.common.serialization.StringDeserializer")
     props.setProperty("auto.offset.reset","latest")
 
-    val input: DataStream[String] = env.addSource(new FlinkKafkaConsumer011[String]("sensor", new SimpleStringSchema(), props))
+    val input: DataStream[String] = env.addSource(new FlinkKafkaConsumer[String]("sensor", new SimpleStringSchema(), props))
 
+    input.print().setParallelism(1)
+
+    env.execute("kafka test")
   }
 }

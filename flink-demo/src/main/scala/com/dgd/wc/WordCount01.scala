@@ -8,7 +8,7 @@ import org.apache.flink.api.scala._
  */
 object WordCount01 {
   def main(args: Array[String]): Unit = {
-    // 1,
+    // 1,执行环境
     val env: ExecutionEnvironment = ExecutionEnvironment.getExecutionEnvironment
     val input: DataSet[String] = env.readTextFile("input")
     val flatMap: DataSet[String] = input.flatMap(_.split(" "))
