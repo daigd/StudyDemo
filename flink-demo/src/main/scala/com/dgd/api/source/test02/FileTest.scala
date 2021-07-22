@@ -1,13 +1,13 @@
-package com.dgd.apitest
+package com.dgd.api.source.test02
 
-import org.apache.flink.streaming.api.scala._
+import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 
 /**
  * @description: TODO
  * @author DaiGD
  * @date 2021/7/19 11:54
  */
-object SourceTest2_File {
+object FileTest {
   def main(args: Array[String]): Unit = {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     env.setParallelism(1)

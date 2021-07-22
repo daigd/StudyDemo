@@ -1,6 +1,6 @@
 package com.dgd.api.transform
 
-import com.dgd.api.source.SensorReading
+import com.dgd.api.source.test01.SensorReading
 import org.apache.flink.api.java.tuple.Tuple
 import org.apache.flink.streaming.api.scala._
 

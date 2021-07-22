@@ -1,4 +1,4 @@
-package com.dgd.api.source
+package com.dgd.api.source.test01
 
 /**
  * @description: 传感器数据封装

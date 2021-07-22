@@ -1,4 +1,4 @@
-package com.dgd.api.source
+package com.dgd.api.source.test01
 
 import org.apache.flink.streaming.api.scala._
 

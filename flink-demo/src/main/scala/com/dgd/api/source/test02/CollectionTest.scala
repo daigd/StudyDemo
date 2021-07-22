@@ -1,4 +1,4 @@
-package com.dgd.apitest
+package com.dgd.api.source.test02
 
 import org.apache.flink.streaming.api.scala._
 
@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.scala._
  * @author DaiGD
  * @date 2021/7/19 11:43
  */
-object SourceTest1_Collection {
+object CollectionTest {
   def main(args: Array[String]): Unit = {
     val env: StreamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment
     // 设置并行度为1,使得全部任务抢占同一个线程执行
@@ -22,6 +22,6 @@ object SourceTest1_Collection {
     intStream.print("Int")
 
     env.execute("sourceTest_collection")
-    
+
   }
 }

@@ -1,10 +1,9 @@
-package com.dgd.api.source
+package com.dgd.api.source.test01
 
 import java.util.concurrent.TimeUnit
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction
 
-import scala.collection.immutable
 import scala.util.Random
 
 /**
