@@ -1,4 +1,4 @@
-package com.dgd.api.transform
+package com.dgd.api.transform.test01
 
 import com.dgd.api.source.test01.SensorReading
 import org.apache.flink.api.java.tuple.Tuple
